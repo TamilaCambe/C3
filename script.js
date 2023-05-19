@@ -8,9 +8,8 @@ function onScroll() {
 
   activateMenuAtCurrentSection(home);
   activateMenuAtCurrentSection(services);
-  activateMenuAtCurrentSection(sliders);
   activateMenuAtCurrentSection(about);
-  activateMenuAtCurrentSection(contact);
+  activateMenuAtCurrentSection(sliders);
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -81,5 +80,4 @@ ScrollReveal({
   #about, 
   #about header, 
   #about .content,
-  #sliders
  `);
