@@ -314,6 +314,11 @@ body.menu-expanded .logo span {
   gap: 6rem;
 }
 
+#home .stat .insightsImage {
+  width: 15rem;
+  height: 15rem;
+}
+
 #home .stat h3 {
   font-size: 4rem;
   color: var(--headline);
@@ -473,7 +478,7 @@ body.menu-expanded .logo span {
 #contact ul {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 4rem;
   margin-bottom: 3.2rem;
 }
 
