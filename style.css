@@ -162,19 +162,6 @@ nav .wrapper {
   justify-content: space-between;
 }
 
-nav .wrapper .logo {
-  font-size: 2rem;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-  color: var(--headline);
-}
-
-nav .wrapper .logo span {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #02054d;
-}
-
 nav.scroll {
   background: var(--primary-color);
 }
