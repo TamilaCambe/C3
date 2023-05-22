@@ -1,12 +1,12 @@
 {
-  "name": "c3!",
+  "name": "c3",
   "version": "1.0.0",
-  "description": "<h1 align='center'> C3! </h1>\r <h2 align='center'>Landing page criada para um cliente. Acesse: www.c3clienteoculto.com.br</h2>\r <h3 align='center'>O site já está no ar, mas essa semana estou fazendo algumas mudanças e melhorias</h3>",
+  "description": "Landing page criada para um cliente, domínio www.c3clienteoculto.com.br",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tamila Cambé",
   "license": "ISC"
 }
