@@ -1,84 +1,61 @@
-window.addEventListener("scroll", onScroll);
+const panels = document.querySelectorAll(".panel");
 
-onScroll();
+panels.forEach((panel) => {
+  panel.addEventListener("mouseover", () => {
+    removeActiveClasses();
+    panel.classList.add("active");
+    panel.querySelector("h3").style.opacity = 1;
+    panel.querySelector("h3").style.visibility = "visible";
+    // Adiciona verificação hover ao h1 para evitar desaparecer
+    if (panel.querySelector("h1:hover")) {
+      panel.querySelector("h1").classList.add("hovered");
+    }
+    panel.querySelector("h1").style.opacity = 1;
+    panel.querySelector("h1").style.visibility = "visible";
+  });
+  // adiciona evento mouseout no h1 para tirar hover do mesmo
+  panel.querySelector("h1").addEventListener("mouseout", () => {
+    panel.querySelector("h1").classList.remove("hovered");
+  });
+});
 
-function onScroll() {
-  showNavOnScroll();
-  showBackToTopButtonOnScroll();
-
-  activateMenuAtCurrentSection(home);
-  activateMenuAtCurrentSection(services);
-  activateMenuAtCurrentSection(about);
-  activateMenuAtCurrentSection(sliders);
+function removeActiveClasses() {
+  panels.forEach((panel) => {
+    panel.classList.remove("active");
+    panel.querySelector("h3").style.opacity = 0;
+    panel.querySelector("h3").style.visibility = "hidden";
+    // adiciona verificação para manter a visibilidade e opacidade do h1
+    if (!panel.querySelector("h1").classList.contains("hovered")) {
+      panel.querySelector("h1").style.opacity = 0;
+      panel.querySelector("h1").style.visibility = "hidden";
+    }
+  });
 }
 
-function activateMenuAtCurrentSection(section) {
-  const targetLine = scrollY + innerHeight / 2;
-
-  // verificar se a seção passou da linha
-  // quais dados vou precisar?
-  const sectionTop = section.offsetTop;
-  const sectionHeight = section.offsetHeight;
-  const sectionTopReachOrPassedTargetline = targetLine >= sectionTop;
-
-  // verificar se a base está abaixo da linha alvo
-
-  const sectionEndsAt = sectionTop + sectionHeight;
-  const sectionEndPassedTargetline = sectionEndsAt <= targetLine;
-
-  // limites da seção
-  const sectionBoundaries =
-    sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline;
-
-  const sectionId = section.getAttribute("id");
-  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
-
-  menuElement.classList.remove("active");
-  if (sectionBoundaries) {
-    menuElement.classList.add("active");
+// Mostra o h1 e o h3 quando a classe .active for adicionada
+document.addEventListener("DOMContentLoaded", () => {
+  const activePanel = document.querySelector(".panel.active");
+  if (activePanel) {
+    activePanel.querySelector("h1").style.opacity = 1;
+    activePanel.querySelector("h1").style.visibility = "visible";
+    activePanel.querySelector("h3").style.opacity = 1;
+    activePanel.querySelector("h3").style.visibility = "visible";
   }
-}
+});
 
-function showNavOnScroll() {
-  let navigation = document.querySelector("#navigation");
-  if (!navigation) return;
-
-  if (scrollY > 0) {
-    navigation.classList.add("scroll");
-  } else {
-    navigation.classList.remove("scroll");
-  }
-}
-
-function showBackToTopButtonOnScroll() {
-  if (scrollY > 550) {
-    backToTopButton.classList.add("show");
-  } else {
-    backToTopButton.classList.remove("show");
-  }
-}
-
-function openMenu() {
-  document.body.classList.add("menu-expanded");
-}
-
-function closeMenu() {
-  document.body.classList.remove("menu-expanded");
-}
-
-ScrollReveal({
-  origin: "top",
-  distance: "30px",
-  duration: 700,
-}).reveal(`
-  #home, 
-  #home img, 
-  #home .stats, 
-  #services,
-  #services header,
-  #services .card
-  #about, 
-  #about header, 
-  #about .content,
-  #sliders
- `);
+// Esconde o h1 e o h3 quando a classe .active for removida
+panels.forEach((panel) => {
+  panel.addEventListener("transitionend", () => {
+    if (!panel.classList.contains("active")) {
+      panel.querySelector("h1").style.opacity = 0;
+      panel.querySelector("h1").style.visibility = "hidden";
+      panel.querySelector("h3").style.opacity = 0;
+      panel.querySelector("h3").style.visibility = "hidden";
+    } else {
+      panel.querySelector("h1").style.opacity = 1;
+      panel.querySelector("h1").style.visibility = "visible";
+      panel.querySelector("h3").style.opacity = 1;
+      panel.querySelector("h3").style.visibility = "visible";
+    }
+  });
+});
