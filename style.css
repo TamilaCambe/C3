@@ -64,16 +64,6 @@ section {
   padding-block: 8rem;
 }
 
-section header h4 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 150%;
-  letter-spacing: 0.08rem;
-  color: var(--primary-color);
-  text-transform: uppercase;
-  margin-bottom: 1.6rem;
-}
-
 section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
