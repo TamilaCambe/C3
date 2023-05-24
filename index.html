@@ -129,7 +129,7 @@
       </div>
     </nav>
 
-    <section id="home">
+    <section id="home" class="ab">
       <div class="wrapper">
         <div class="col-a">
           <header>
@@ -170,7 +170,7 @@
           <div class="stat">
             <img src="./assets/profissionais.png" class="insightsImage" />
             <h3>Profissionais</h3>
-            <p>
+            <p class="insights">
               Com mais de 10 anos de experiência nas áreas de atendimento e
               satisfação do cliente.
             </p>
@@ -182,7 +182,7 @@
               class="insightsImage"
             />
             <h3>Avaliadores</h3>
-            <p>
+            <p class="insights">
               Capacitados, qualificados e treinados de acordo com cada projeto.
             </p>
           </div>
@@ -190,88 +190,41 @@
           <div class="stat">
             <img src="./assets/plataforma.png" class="insightsImage" />
             <h3>Exclusiva</h3>
-            <p>Plataforma para entrega de resultados.</p>
+            <p class="insights">Plataforma para entrega de resultados.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="services">
-      <div class="wrapper">
+      <div>
         <header>
           <h4>Serviços</h4>
           <h2>Conheça nossos serviços:</h2>
         </header>
-
-        <div class="content">
-          <div class="cards">
-            <div class="card">
-              <img
-                src="./assets/clientes-oculto-presencial.png"
-                alt="Dois bonequinho dando as mãos e uma estrelinha no centro, simulando que o atendimento foi bom"
-              />
-              <h3>Cliente Oculto Presencial</h3>
-              <p>
-                Avaliadores se passam por clientes para visitar estabelecimentos
-                , realizando análises criteriosas e detalhadas.
-              </p>
-            </div>
-
-            <div class="card">
-              <img
-                src="./assets/av-de-compra-online.png"
-                alt="Figura de um tablet com uma lupa em cima"
-              />
-              <h3>Avaliação de Compra Online</h3>
-              <p>Avalia a eficiência da estrutura online do seu negócio.</p>
-            </div>
-
-            <div class="card">
-              <img
-                src="./assets/compra-via-whats.png"
-                alt="Figutinha de u celular com o símbolo $ bem no centro, uma mão apontando o dedo indicador para o celular e abaixo outra figura co o símbolo do whatsapp"
-              />
-              <h3>Compra Via Whatsapp</h3>
-              <p>Avalia a eficiência da estrutura online do seu negócio.</p>
-            </div>
-
-            <div class="card">
-              <img
-                src="./assets/atendimento-telefone.png"
-                alt="Figurinha de um bonequinho com headseat no ouvido simulando um atendente"
-              />
-              <h3>Atendimento Telefone</h3>
-              <p>
-                Analisamos diferentes indicadores como abordagem satisfatória,
-                cortesia, cordialidade, atenção, tempo de atendimento, tempo de
-                retorno no momento , dentre outros indicadores.
-              </p>
-            </div>
-
-            <div class="card">
-              <img
-                src="./assets/av-na-concorrencia.png"
-                alt="Figurinha simulando um pódium com três lugares"
-              />
-              <h3>Avaliação na Concorrência</h3>
-              <p>
-                Avalie processos, boas práticas, produtos e pontos competitivos
-                da concorrência.
-              </p>
-            </div>
-
-            <div class="card">
-              <img
-                src="./assets/av-de-pdv.png"
-                alt="Figurinha com uma mão segurando três bonequinhos"
-              />
-              <h3>Avaliação de PDV</h3>
-              <p>
-                Analise atendimentos em como ações externas, feiras, eventos,
-                stands e estruturas temporárias.
-              </p>
-            </div>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="./assets/1a.png" style="width: 100%" />
           </div>
+
+          <div class="mySlides fade">
+            <img src="./assets/2.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./assets/3.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./assets/4.png" style="width: 100%" />
+          </div>
+
+          <div class="mySlides fade">
+            <img src="./assets/5.png" style="width: 100%" />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
       </div>
     </section>
@@ -556,5 +509,6 @@
     </a>
     <script src="./script.js"></script>
     <script src="./main.js"></script>
+    <script src="./services.js"></script>
   </body>
 </html>
