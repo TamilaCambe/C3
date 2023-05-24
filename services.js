@@ -19,7 +19,7 @@ function showSlides(n) {
   if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-  autoShowTimeout = setTimeout(() => showSlides(slideIndex), 5000);
+  autoShowTimeout = setTimeout(() => showSlides(slideIndex), 3000);
 }
 
 function plusSlides(n) {
@@ -43,18 +43,3 @@ document.querySelector(".next").addEventListener("click", function () {
 });
 
 showSlides(slideIndex); // Inicia a apresentação
-
-// Definição da função delay
-async function delay(milliseconds) {
-  await new Promise((resolve) => setTimeout(resolve, milliseconds));
-}
-
-// Função teste que usa a função delay para pausar a execução do código
-async function test() {
-  console.log("Começando");
-  await delay(5000);
-  console.log("Finalizando");
-}
-
-// Chama a função teste
-test();
