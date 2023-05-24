@@ -8,8 +8,8 @@
 }
 
 :root {
-  --hue: 238;
-  --primary-color: hsl(var(--hue), 100%, 26%);
+  --hue: 235;
+  --primary-color: hsl(var(--hue), 100%, 15%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
   --brand-beige: hsl(39, 100%, 97%);
@@ -57,8 +57,9 @@ ul {
 }
 
 img {
-  max-width: 75%;
+  max-width: 80%;
   margin-inline: auto;
+  border-radius: 3.13rem;
 }
 
 .logo {
@@ -311,10 +312,11 @@ body.menu-expanded .logo span {
   width: 100%;
   padding-block: 4rem;
   margin-inline: auto;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border: none;
-  border-radius: 0.6rem;
+  border-top-right-radius: 3.13rem;
+  border-top-left-radius: 3.13rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -370,7 +372,7 @@ body.menu-expanded .logo span {
   background-color: var(--brand-dark);
 }
 
-/*=== SLIDERS =================================*/
+/*=== SLIDERS MISSÃO, VISÃO, VALORES=================================*/
 .container {
   display: flex;
   padding: 2rem;
@@ -742,7 +744,7 @@ footer .social-links {
   }
 
   .next {
-    right: 162.5px;
+    right: 130px;
     border-radius: 3px 0 0 3px;
   }
 
