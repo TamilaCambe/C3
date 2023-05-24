@@ -47,6 +47,11 @@ body {
   padding-inline: 2.4rem;
 }
 
+.ab {
+  background-image: url(./assets/capa-mobile.png);
+  background-size: cover;
+}
+
 ul {
   list-style: none;
 }
@@ -72,7 +77,7 @@ section header h2 {
 
 section header h1 {
   font-size: 3.4rem;
-  color: var(--headline);
+  color: var(--bg-light);
   line-height: 130%;
   margin-bottom: 2.4rem;
 }
@@ -85,7 +90,7 @@ section .content p {
 }
 
 .button {
-  background: var(--primary-color);
+  background: #02054d;
   border: none;
   border-radius: 4rem;
   margin-bottom: 6rem;
@@ -288,7 +293,8 @@ body.menu-expanded .logo span {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
-  color: var(--paragraph);
+  font-style: italic;
+  color: var(--bg-light);
   margin-bottom: 3.2rem;
   padding-inline: 0.75rem;
 }
@@ -305,8 +311,9 @@ body.menu-expanded .logo span {
   width: 100%;
   padding-block: 4rem;
   margin-inline: auto;
-  background-color: #ffffff;
-  border: 1px solid var(--brand-light);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border: none;
   border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
@@ -326,6 +333,11 @@ body.menu-expanded .logo span {
   margin-bottom: 0.4rem;
 }
 
+#home .insights {
+  color: var(--headline);
+  font-style: normal;
+}
+
 #home .stat button {
   background-color: var(--primary-color);
   border: none;
@@ -340,35 +352,6 @@ body.menu-expanded .logo span {
 }
 
 /*=== SERVICES =================================*/
-#services header h2 {
-  margin-bottom: 6rem;
-}
-
-#services .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 3.2rem;
-}
-
-#services .card {
-  padding: 2.4rem;
-  text-align: left;
-  border: 1px solid var(--brand-light);
-  border-radius: 0.6rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  width: 100%;
-  gap: 1rem;
-  background-color: #ffffff;
-}
-
-#services .card h3 {
-  margin-block: 0.5rem;
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: var(--headline);
-}
 
 .viewMore {
   margin-top: 2.5rem;
@@ -556,6 +539,12 @@ footer .social-links {
     width: min(112rem, 100%);
     display: grid;
   }
+
+  .ab {
+    background-image: url(./assets/capa40cinza.png);
+    background-size: cover;
+    transition: 0.5s ease;
+  }
   .col-a {
     grid-area: A;
   }
@@ -603,7 +592,7 @@ footer .social-links {
   }
 
   nav#navigation .menu ul li a {
-    color: var(--primary-color);
+    color: var(--bg-light);
     opacity: 0.7;
     font-size: 1.6rem;
   }
@@ -613,9 +602,9 @@ footer .social-links {
     justify-content: center;
     align-items: center;
     padding: 1rem 2.4rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--bg-light);
     border-radius: 4rem;
-    color: var(--primary-color);
+    color: var(--bg-light);
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -652,7 +641,7 @@ footer .social-links {
     content: "";
     width: 0%;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--bg-light);
     position: relative;
     bottom: -2rem;
     left: -0.5rem;
@@ -722,18 +711,44 @@ footer .social-links {
     width: 42rem;
   }
   /*=== SERVICES =================================*/
-  #services h2 {
-    width: 52rem;
-    margin-inline: auto;
+  .slideshow-container {
+    max-width: 1300px;
+    position: relative;
+    margin: auto;
+    top: 6rem;
   }
-  #services .cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4rem;
+
+  .mySlides {
+    display: none;
   }
-  #services .card {
-    width: 30%;
-    flex-grow: 1;
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .prev {
+    display: none;
+  }
+
+  .next {
+    right: 162.5px;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(255, 250, 110, 0.8);
   }
   /*=== SLIDES =================================*/
   .container {
