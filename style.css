@@ -374,13 +374,16 @@ body.menu-expanded .logo span {
 
 .slideshow-container {
   margin-top: 5rem;
+  position: relative;
 }
 
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
-  top: 309%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: auto;
   padding: 16px;
   color: #02054d;
