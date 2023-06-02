@@ -397,6 +397,7 @@ body.menu-expanded .logo span {
 
 .next {
   right: 0px;
+  left: 0px
   border-radius: 3px 0 0 3px;
 }
 
