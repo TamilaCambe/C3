@@ -403,7 +403,6 @@ body.menu-expanded .logo span {
 .prev:hover,
 .next:hover {
   background-color: rgba(255, 250, 110, 0.8);
-  left: 0;
 }
 
 /*=== SLIDERS MISSÃO, VISÃO, VALORES=================================*/
