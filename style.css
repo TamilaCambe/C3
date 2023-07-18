@@ -889,3 +889,53 @@ footer .social-links {
     font-size: 1.6rem;
   }
 }
+
+.panel-options {
+  display: flex !important;
+  position: fixed !important;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-hide {
+  display: none !important;
+}
+
+.panel-options-links {
+  display: flex !important;
+  flex-flow: column !important;
+  max-width: 600px;
+  background: rgba(255, 255, 255) !important;
+  gap: 20px;
+  font-size: 20px;
+  padding: 10px 30px 40px !important;
+  border-radius: 22px;
+}
+
+.close-button-holder {
+  width: 100%;
+  display: flex !important;
+  justify-content: end !important;
+}
+
+.close-panel-options {
+  max-width: 40px;
+  cursor: pointer;
+  filter: invert(8%) sepia(36%) saturate(6395%) hue-rotate(234deg)
+    brightness(87%) contrast(115%) !important;
+}
+
+.admin-footer {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.admin-footer a {
+  color: #fff;
+}
